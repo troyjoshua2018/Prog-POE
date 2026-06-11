@@ -9,7 +9,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class QuickChat {
-    // Parallel Array Structures required by the PoE Rubric Guidelines
+    // Parallel Array Structures 
     private final ArrayList<String> messageIDs = new ArrayList<>();
     private final ArrayList<String> recipientsOrDevelopers = new ArrayList<>();
     private final ArrayList<String> messageTexts = new ArrayList<>();
@@ -26,15 +26,15 @@ public class QuickChat {
     }
 
     private void preloadTestData() {
-        // Message 1-3 Simulation Placeholders (matching required test patterns)
+        // Message 1-3 Simulation Placeholders 
         addMessageRecord("000001", "0821112222", "Did you get the cake?", "Sent", "hash1");
         addMessageRecord("000002", "+27838884567", "Where are you? You are late! I have asked you to be on time.", "Sent", "hash2");
         addMessageRecord("000003", "+27838884567", "Testing message sequence three", "Sent", "hash3");
         
-        // Message 4 (From your uploaded spec document screenshot)
+        // Message 4 
         addMessageRecord("0838884567", "0838884567", "It is dinner time !", "Sent", "hash4");
         
-        // Message 5 (From your uploaded spec document screenshot)
+        // Message 5 
         addMessageRecord("000005", "+27838884567", "Ok, I am leaving without you.", "Stored", "hash5");
     }
 
@@ -96,7 +96,7 @@ public class QuickChat {
         }
     }
 
-    // --- NEW FEATURE: ADD NEW MESSAGES FLOW ---
+    // --- ADD NEW MESSAGES FLOW ---
     private void handleAddNewMessages() {
         System.out.print("How many messages would you like to add? ");
         while (!scanner.hasNextInt()) {
@@ -141,7 +141,7 @@ public class QuickChat {
         }
     }
 
-    // --- NEW FEATURE: DISPLAY ALL SENT MESSAGES ---
+    // --- DISPLAY ALL SENT MESSAGES ---
     public void displayAllSentMessages() {
         System.out.println("\n=== ALL SENT MESSAGES ===");
         boolean foundSent = false;
@@ -162,7 +162,7 @@ public class QuickChat {
         }
     }
 
-    // --- ASSIGNMENT ALGORITHMS (CRITERIA COMPLIANT) ---
+    // --- ASSIGNMENT ALGORITHMS ---
 
     public String getLongestMessage() {
         if (messageTexts.isEmpty()) return "No messages available.";
